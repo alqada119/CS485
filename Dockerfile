@@ -6,5 +6,5 @@ RUN pip install -r requirements.txt
 RUN apt update && apt -y install supervisor && apt -y install mariadb-server
 RUN chmod +x /src/*.sh
 RUN /src/dbsetup.sh
-RUN supervisord -c /src/supervisord.conf
+EXPOSE 80
 CMD ["supervisord","-c","/src/supervisord.conf"]

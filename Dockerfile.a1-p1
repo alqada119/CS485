@@ -1,3 +1,0 @@
-FROM python
-COPY helloworld.py /script/
-CMD  python /script/helloworld.py """tells docker what command to run"""

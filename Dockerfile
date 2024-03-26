@@ -1,6 +1,7 @@
 FROM node AS build
 COPY ./frontend /frontend/
 WORKDIR /frontend/
+ENV NODE_ENV=production
 RUN npm install
 RUN npm run build 
 FROM python as runtime
